@@ -1,8 +1,12 @@
 {
-  "name": "loudness",
+  "name": "mwl-loudness",
   "version": "0.3.0",
   "license": "MIT",
-  "repository": "LinusU/node-loudness",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ronio/node-loudness.git"
+  },
+  "homepage": "https://github.com/Ronio/node-loudness",
   "scripts": {
     "test": "standard && mocha"
   },
