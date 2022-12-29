@@ -2,7 +2,9 @@ require('hazardous')
 const execa = require('execa')
 const path = require('path')
 
-const executablePath = path.join(__dirname, 'adjust_get_current_system_volume_vista_plus.exe')
+const executablePath = process.NODE_ENV ? 
+  path.resolve('node_modules', 'mwl-loudness', 'impl', 'windows', 'adjust_get_current_system_volume_vista_plus.exe') :
+  path.join(process.resourcesPath, 'dll', 'adjust_get_current_system_volume_vista_plus.exe')
 
 function runProgram (...args) {
   return execa.stdout(executablePath, args)
